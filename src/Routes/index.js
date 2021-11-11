@@ -4,7 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import Home from '../Pages/Home';
 import Notfound from '../Pages/Notfound';
 import Product from '../Pages/Product/Product';
-import Categorias from '../Parts/Home/Categoria';
+import Categorias from '../Pages/Category';
+import Login from '../Pages/Login';
 
 
 export default function Routes() {
@@ -12,7 +13,8 @@ export default function Routes() {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/produto/:id" component={Product} />
-            <Route path="/categoria/:type" component={Categorias} />
+            <Route path="/categoria/:category" component={Categorias} />
+            <Route path="/login" component={Login} />
             <Route component={Notfound} />
         </Switch>
     )

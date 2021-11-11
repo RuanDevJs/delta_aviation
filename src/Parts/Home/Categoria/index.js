@@ -7,48 +7,50 @@ import turbopropulsor from "../../../assets/images/category/novo-turboelice-da-e
 import jato from "../../../assets/images/category/images.png";
 
 import { Categoria, CategoryArea, CategoryTitle, Title } from "./style";
-
+import { Link } from "react-router-dom";
 
 function Categorias() {
-    const settings = {
-        className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500
-      };
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+  };
 
   const categoria = [
     {
       title: "Monomotor",
-      image: categoria_image
+      image: categoria_image,
     },
     {
       title: "Bimotor",
-      image: bimotor
+      image: bimotor,
     },
     {
       title: "Turbopropulsor",
-      image: turbopropulsor
+      image: turbopropulsor,
     },
     {
       title: "Jato",
-      image: jato
+      image: jato,
     },
   ];
 
   return (
     <Categoria>
       <Title>Categorias</Title>
-      <Slider {...settings}>
-        {categoria.map(({title, image}) => {
-            return(
-                <CategoryArea key={title}>
-                    <img src={image} alt={title}/>
-                    <CategoryTitle>{title}</CategoryTitle>
-                </CategoryArea>
-            )
+      <Slider {...settings} pauseOnFocus>
+        {categoria.map(({ title, image }) => {
+          return (
+            <CategoryArea key={title}>
+              <img src={image} alt={title} />
+              <CategoryTitle as={Link} to={`/categoria/${title}`} style={{textAlign: "center", display: "block"}}>
+                {title}
+              </CategoryTitle>
+            </CategoryArea>
+          );
         })}
       </Slider>
     </Categoria>

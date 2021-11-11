@@ -30,7 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Wrap = styled.div`
-    max-width: 300px;
+    width: 300px;
     margin-bottom: 20px;
 `;
 
@@ -39,6 +39,7 @@ export const Image = styled.img`
     display: block;
     object-fit: cover;
     border-radius: 4px;
+    height: 320px;
 `;
 
 export const ProductTitle = styled.h1`

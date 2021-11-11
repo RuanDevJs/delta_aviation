@@ -26,10 +26,34 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   flex: 1;
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background: #55C1C3;
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    width: 220px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    transition: .2s ease-out;
+    cursor: pointer;
+  }
+
+  a:hover {
+    transition: .2s ease-in;
+    background: #51C8C2;
+  }
 `;
 
 export const Image = styled.img`
   border-radius: 12px;
+  height: 320px;
+  width: 420px;
 `;
 
 export const Title = styled.h1`

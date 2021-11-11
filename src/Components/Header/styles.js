@@ -18,6 +18,14 @@ export const AnnouncementLink = styled(Link)`
     padding: 0 1px;
 `;
 
+export const NameLink = styled(Link)`
+    font-size: 16px;
+    font-weight: 500;
+    color: #C2C2C2;
+    text-transform: capitalize;
+    padding: 0 15px;
+`;
+
 export const Container = styled.header`
     padding: 20px;
     max-width: 960px;

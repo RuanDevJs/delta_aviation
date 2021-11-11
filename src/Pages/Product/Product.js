@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Redirect, useParams } from "react-router";
 
 import Header from "../../Components/Header";
@@ -12,20 +12,42 @@ import Governador from "../../assets/images/product/governador.png";
 import pt6 from "../../assets/images/product/pt6.png";
 import Boostpump from "../../assets/images/product/boots.png";
 import Cremalheira from "../../assets/images/product/cremalheira.png";
-import Categoria from "../../Parts/Home/Categoria";
+
 import Button from "../../Components/Button";
-import Produto from "../../Parts/Home/Produtos";
-import Categorias from "../../Parts/Home/Categoria";
 import { ProductPrice } from "../../Parts/Home/Produtos/style";
 
 function Product() {
+  const [name, setName] = useState("");
   const [value, setValue] = useState();
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+  const userId = useMemo(() => {
+    const id = window.localStorage.getItem("id");
+    if (id) {
+      return id;
+    }
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        if(userId.length){
+          const data = await (
+            await fetch(`https://api-deltaavitation.herokuapp.com/user/${userId}`)
+          ).json();
+          setName(data[0].nome);
+          setLoading(false);
+        }
+      } catch {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
   const data = [
     {
-      title: "GNS530",
+      title: "GNS 530",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
       preco: 50000,
@@ -92,10 +114,8 @@ function Product() {
     setValue(dataProduct);
   }, []);
 
-  if(!loading && !value){
-    return(
-      <Redirect to="/"/>
-    )
+  if (!loading && !value) {
+    return <Redirect to="/*" />;
   }
 
   return (
@@ -109,11 +129,29 @@ function Product() {
           </Left>
           <Right>
             <Title>{value.title}</Title>
-            <ProductPrice style={{ color: "#c2c2c2", fontWeight: 300, marginBottom: "10px" }}>
+            <ProductPrice
+              style={{
+                color: "#c2c2c2",
+                fontWeight: 300,
+                marginBottom: "10px",
+              }}
+            >
               R$ {value.preco},00
             </ProductPrice>
             <Subtitle>{value.subtitle}</Subtitle>
-            <Button>Comprar</Button>
+            {!loading && name.length? (
+               <a
+               href={`https://wa.me/5531993944304?text=Olá! Me chamo ${name} e gostaria de auxílio para finalizar minha compra.`}
+             >
+               Comprar
+             </a>
+            ) : (
+              <a
+                href={`https://wa.me/5531993944304?text=Olá! Me chamo ${name} e gostaria de auxílio para finalizar minha compra.`}
+              >
+                Comprar
+              </a>
+            )}
           </Right>
         </Container>
       )}
