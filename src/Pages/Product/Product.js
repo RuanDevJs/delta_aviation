@@ -50,21 +50,21 @@ function Product() {
       title: "GNS 530",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "5000",
       image: gns530,
     },
     {
       title: "Pneu 235x45",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "2.500",
       image: pneu,
     },
     {
       title: "Seletora c152",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "3.000",
       image: seletoraC152,
     },
     {
@@ -73,35 +73,35 @@ function Product() {
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati
             numquam aspernatur assumenda omnis vel, voluptas in eveniet odit
             reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "30.000",
       image: compensador,
     },
     {
       title: "Embandeirador",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "5.000",
       image: Governador,
     },
     {
       title: "PT6",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "256.000",
       image: pt6,
     },
     {
       title: "Cremalheira",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "4.000",
       image: Cremalheira,
     },
     {
       title: "Boostpump",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
             beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-      preco: 50000,
+      preco: "5.000",
       image: Boostpump,
     },
   ];

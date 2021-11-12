@@ -38,6 +38,10 @@ export const Product = styled.section`
         margin-top: 10px;
         padding: 10px;
     }
+
+    a {
+        text-align: center;
+    }
 `;
 
 

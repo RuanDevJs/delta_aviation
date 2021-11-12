@@ -24,15 +24,20 @@ export default function useAuthenticate(){
             senha: senha
         })).data;
         
-        if(rows.length){
-            setLoading(false);
-            setAuthenticated(true);
-            window.localStorage.setItem("id", rows[0]._id);
-            history.push("/");
-        }else{
-            setLoading(false);
-            setAuthenticated(true);
-            return "Email/Senha não existe!";
+        return rows;
+    }
+
+    async function StoreUser({nome, email, senha}){
+        try{
+            const rows = await (await axios.post("/user", {
+                email: email,
+                nome: nome,
+                senha: senha
+            })).data;
+            
+            return rows;
+        }catch(e){
+            return e;
         }
     }
 
@@ -41,5 +46,5 @@ export default function useAuthenticate(){
         window.localStorage.removeItem("id");
     }
 
-    return {Login, authenticated, loading, logOut}
+    return {Login, authenticated, loading, logOut, setAuthenticated, StoreUser}
 }

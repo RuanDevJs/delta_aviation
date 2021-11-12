@@ -18,47 +18,47 @@ function Produto() {
         {
             title: "GNS 530",
             img: gns530,
-            preco: 50000
+            preco: "50000",
         },
         {
             title: "Pneu 235x45",
             img: pneu,
-            preco: 50000
+            preco: "2.500",
         },
         {
             title: "Seletora c152",
             img: seletoraC152,
-            preco: 50000
+            preco: "3.000",
         },
         {
             title: "Compensador lateral",
             img: compensador,
-            preco: 50000
+            preco: "30.000",
         },
         {
             title: "Embandeirador",
             img: Governador,
-            preco: 50000
+            preco: "5.000",
         },
         {
             title: "PT6",
             img: pt6,
-            preco: 50000
+            preco: "256.000",
         },
         {
             title: "Boostpump",
             img: Boostpump,
-            preco: 50000
+            preco: "5.000",
         },
         {
             title: "Cremalheira",
             img: Cremalheira,
-            preco: 50000
+            preco: "4.000",
         },
         {
             title: "GNS 530",
             img: gns530,
-            preco: 50000
+            preco: "50000",
         },
     ]
     return (
@@ -68,7 +68,9 @@ function Produto() {
                 {data.map(({title, preco,img}, index) => {
                     return(
                         <Wrap key={index}>
-                            <Image src={img} />
+                            <Link to={`/produto/${title}`}>
+                                <Image src={img} />
+                            </Link>
                             <ProductTitle>{title}</ProductTitle>
                             <ProductPrice>R$ {preco},00</ProductPrice>
                             <Button as={Link} to={`/produto/${title}`}>Comprar</Button>
