@@ -147,7 +147,7 @@ function Product() {
              </a>
             ) : (
               <a
-                href={`https://wa.me/5531993944304?text=Olá! Me chamo ${name} e gostaria de auxílio para finalizar minha compra.`}
+                href={`https://wa.me/5531993944304?text=Olá! Gostaria de auxílio para finalizar minha compra.`}
               >
                 Comprar
               </a>

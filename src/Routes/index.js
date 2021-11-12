@@ -7,6 +7,8 @@ import Product from '../Pages/Product/Product';
 import Categorias from '../Pages/Category';
 import Login from '../Pages/Login';
 import Cadastrar from '../Pages/Cadastrar';
+import Sobre from '../Pages/Sobre';
+import Contato from '../Pages/Contato';
 
 export default function Routes() {
     return (
@@ -16,6 +18,8 @@ export default function Routes() {
             <Route path="/categoria/:category" component={Categorias} />
             <Route path="/login" component={Login} />
             <Route path="/cadastro" component={Cadastrar} />
+            <Route path="/sobre" component={Sobre} />
+            <Route path="/contato" component={Contato} />
             <Route component={Notfound} />
         </Switch>
     )

@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 function Recomendacao() {
   const settings = {
     className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
   };
 
   const data = [
@@ -26,22 +26,22 @@ function Recomendacao() {
       title: "Compensador lateral",
       img: compensador,
       preco: "30.000",
-  },
-  {
+    },
+    {
       title: "Embandeirador",
       img: Governador,
       preco: "5.000",
-  },
-  {
+    },
+    {
       title: "PT6",
       img: pt6,
       preco: "256.000",
-  },
-  {
+    },
+    {
       title: "Boostpump",
       img: Boostpump,
       preco: "5.000",
-  },
+    },
   ];
 
   return (
@@ -55,13 +55,12 @@ function Recomendacao() {
         {data.map(({ title, img }, index) => {
           return (
             <Product key={index}>
-              <Link to={`/produto/${title}`}>
               <img src={img} alt={title} width={300} />
-                            </Link>
-              
               <ProductTitle>{title}</ProductTitle>
               <ProductRate>5/5</ProductRate>
-              <ButtonBuy as={Link} to={`/produto/${title}`}>Comprar</ButtonBuy>
+              <ButtonBuy as={Link} to={`/produto/${title}`}>
+                Comprar
+              </ButtonBuy>
             </Product>
           );
         })}

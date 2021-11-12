@@ -44,6 +44,7 @@ export default function useAuthenticate(){
     function logOut(){
         setAuthenticated(false);
         window.localStorage.removeItem("id");
+        history.push("/");
     }
 
     return {Login, authenticated, loading, logOut, setAuthenticated, StoreUser}

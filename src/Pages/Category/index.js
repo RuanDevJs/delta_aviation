@@ -13,6 +13,7 @@ import Boostpump from "../../assets/images/product/boots.png";
 import Cremalheira from "../../assets/images/product/cremalheira.png";
 import Header from "../../Components/Header";
 import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 export default function Categoria() {
   const { category } = useParams();
@@ -63,13 +64,13 @@ export default function Categoria() {
       categoria: "Bimotor",
     },
     {
-        title: "GNS 530",
-        subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+      title: "GNS 530",
+      subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
                 beatae fugit laborum quos repellat nisi tempora consectetur obcaecati numquam aspernatur assumenda omnis vel, voluptas in eveniet odit reprehenderit eos rerum fuga?`,
-        preco: 50000,
-        image: gns530,
-        categoria: "Bimotor",
-      },
+      preco: 50000,
+      image: gns530,
+      categoria: "Bimotor",
+    },
     {
       title: "PT6",
       subtitle: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
@@ -105,10 +106,8 @@ export default function Categoria() {
     setLoading(false);
   }, []);
 
-  if(!loading && products.length <= 0){
-    return(
-      <Redirect to="/*" />
-    )
+  if (!loading && products.length <= 0) {
+    return <Redirect to="/*" />;
   }
 
   if (loading) {
@@ -124,10 +123,12 @@ export default function Categoria() {
           {products.map(({ title, image, preco }) => {
             return (
               <Wrap>
-                <img src={image} alt={title}/>
+                <Link to={`/produto/${title}`}>
+                  <img src={image} alt={title} />
+                </Link>
                 <h2>{title}</h2>
                 <p>R$ {preco},00</p>
-                <Button>Comprar</Button>
+                <Link to={`/produto/${title}`} className="buy">Comprar</Link>
               </Wrap>
             );
           })}

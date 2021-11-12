@@ -51,4 +51,26 @@ export const Wrap = styled.div`
     font-weight: 300;
     color: #c1c1c1;
   }
+
+  a.buy{
+    display: block;
+    padding: 20px;
+    background: #55C1C3;
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    width: 220px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    transition: .2s ease-out;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      transition: .2s ease-in;
+      background: #51C8C2;
+    }
+  }
 `;
