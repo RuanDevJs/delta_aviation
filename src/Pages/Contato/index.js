@@ -4,6 +4,7 @@ import Lottie from "react-lottie";
 import svg from "../../assets/lotties/57545-plane.json";
 
 import Button from "../../Components/Button";
+import Footers from "../../Components/Footer";
 import Header from "../../Components/Header";
 
 import { Container, Input, Label, Left, Right, Wrap } from "./styles";
@@ -39,6 +40,7 @@ export default function Contato() {
         />
         </Right>
       </Container>
+      <Footers />
     </>
   );
 }

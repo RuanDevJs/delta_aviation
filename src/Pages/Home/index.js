@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
 import Categorias from '../../Parts/Home/Categoria';
 import Intro from '../../Parts/Home/Intro';
@@ -13,6 +14,7 @@ function Home() {
             <Categorias />
             <Produtos />
             <Recomendacao />
+            <Footer />
         </>
     )
 }

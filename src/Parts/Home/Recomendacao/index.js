@@ -44,6 +44,15 @@ function Recomendacao() {
     },
   ];
 
+  const settingsMobile = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "10px",
+    slidesToShow: 1,
+    speed: 500,
+  }
+
   return (
     <Container id="recomendacao">
       <Line>
@@ -51,7 +60,21 @@ function Recomendacao() {
           Recomendação
         </Button>
       </Line>
-      <Slider {...settings} focusOnSelect>
+      <Slider {...settings} focusOnSelect className="desktop-slider-recomendacao">
+        {data.map(({ title, img }, index) => {
+          return (
+            <Product key={index}>
+              <img src={img} alt={title} width={300} />
+              <ProductTitle>{title}</ProductTitle>
+              <ProductRate>5/5</ProductRate>
+              <ButtonBuy as={Link} to={`/produto/${title}`}>
+                Comprar
+              </ButtonBuy>
+            </Product>
+          );
+        })}
+      </Slider>
+      <Slider {...settingsMobile} focusOnSelect className="mobile-slider-recomendacao">
         {data.map(({ title, img }, index) => {
           return (
             <Product key={index}>

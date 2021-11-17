@@ -4,6 +4,24 @@ export const Container = styled.section`
     .slick-slider {
         overflow-y: hidden;
     }
+
+    .mobile-slider-recomendacao {
+        display: none;
+    }
+
+    @media (max-width: 728px){
+        .desktop-slider-recomendacao{
+            display: none;
+        }
+        .mobile-slider-recomendacao {
+            display: block;
+            margin-bottom: 100px;
+        }
+        a {
+            margin: 8px 0;
+            padding: 12px;
+        }
+    }
 `;
 
 export const Line = styled.div`
@@ -42,6 +60,7 @@ export const Product = styled.section`
     a {
         text-align: center;
     }
+
 `;
 
 

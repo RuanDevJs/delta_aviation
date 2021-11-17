@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router";
 
 import Button from "../../Components/Button";
+import Footers from "../../Components/Footer";
 import Header from "../../Components/Header";
 import Message from "../../Components/Message";
 import { UserContext } from "../../Contexts/User.js";
@@ -68,6 +69,7 @@ export default function Cadastrar() {
           {!loading && <Message text={text} />}
         </Container>
       </section>
+      <Footers />
     </>
   );
 }

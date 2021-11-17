@@ -1,5 +1,6 @@
 import React from 'react';
 import lucas from "../../assets/images/sobre/Rectangle 24.svg";
+import Footers from '../../Components/Footer';
 import Header from '../../Components/Header';
 
 import { Container, Name, SectionTitle, Title, Wrap, WrapTitle } from './style';
@@ -39,6 +40,7 @@ export default function Sobre() {
                 </Wrap>
             </Container>
         </section>
+        <Footers />
         </>
     )
 }

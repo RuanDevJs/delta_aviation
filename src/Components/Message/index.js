@@ -9,6 +9,11 @@ const Msg = styled.span`
     color: #333;
     padding: 20px 0px;
     margin: 10px auto;
+
+    @media {
+        padding: 10px 0; 
+        font-size: 24px;
+    }
 `
 
 export default function Message({text, ...props}) {

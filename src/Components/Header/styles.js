@@ -16,6 +16,10 @@ export const AnnouncementLink = styled(Link)`
     color: #C2C2C2;
     text-transform: uppercase;
     padding: 0 1px;
+
+    @media (max-width: 728px){
+        font-size: 20px;
+    }
 `;
 
 export const NameLink = styled(Link)`
@@ -34,10 +38,18 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     flex-rap: wrap;
+    
 `;
 
 export const Left = styled.div`
     flex: 1;
+
+    @media (max-width: 728px) {
+        & {
+            display: flex;
+            justify-content: center;
+        }
+    }
 `;
 
 export const Image = styled.img`
@@ -48,6 +60,11 @@ export const Image = styled.img`
 
 export const Center = styled.div`
     flex: 1;
+    @media (max-width: 728px) {
+        & {
+            display: none;
+        }
+    }
 `;
 
 export const Wrap = styled.ul`
@@ -77,11 +94,24 @@ export const MenuLink = styled(Link)`
 export const Right = styled.div`
     flex: 1;
     margin-left: 50px;
+
+    @media (max-width: 728px) {
+        & {
+            display: none;
+        }
+    }
 `;
 
 export const Search = styled.input`
     background: #f2f2f2;
     width: 60%;
+
+    @media (max-width: 728px) {
+        & {
+            display: block;
+            margin: 0 auto;
+        }
+    }
 `;
 
 export const Input = styled.input`

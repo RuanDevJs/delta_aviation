@@ -16,11 +16,29 @@ export const Contaienr = styled.div`
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 728px){
+        margin: 20px auto;
+    }
 `;
 
 export const Left = styled.div`
     flex: 1 1 460px;
     max-width: 460px;
+
+    @media (max-width: 728px){
+        button {
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+     }
 `;
 
 export const Title = styled.h2`
@@ -31,6 +49,10 @@ export const Title = styled.h2`
     &.active {
         opacity: 1;
         animation: ${Animate} 0.5s forwards;
+    }
+
+    @media (max-width: 728px){
+        font-size: 32px;
     }
 `;
 

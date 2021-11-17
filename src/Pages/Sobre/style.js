@@ -7,11 +7,16 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @media (max-width: 728px){
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Title = styled.h1`
     font-size: 50px;
-    max-width: 960px;
+    max-width: 80%;
     margin: 5px auto;
     color: #55C1C3; 
     font-weight: 900;
@@ -23,6 +28,11 @@ export const Title = styled.h1`
 export const Wrap = styled.div`
     width: ${({size}) => size ? size : "30%"};
     margin-bottom: 45px;
+
+    @media (max-width: 728px){
+      width: 320px;
+      margin-left: 30px;
+    }
 
     p {
         font-size: 20px;

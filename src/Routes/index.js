@@ -9,10 +9,12 @@ import Login from '../Pages/Login';
 import Cadastrar from '../Pages/Cadastrar';
 import Sobre from '../Pages/Sobre';
 import Contato from '../Pages/Contato';
+import Footer from '../Components/Footer';
 
 export default function Routes() {
     return (
-        <Switch>
+        <>
+            <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/produto/:id" component={Product} />
             <Route path="/categoria/:category" component={Categorias} />
@@ -21,6 +23,8 @@ export default function Routes() {
             <Route path="/sobre" component={Sobre} />
             <Route path="/contato" component={Contato} />
             <Route component={Notfound} />
-        </Switch>
+            </Switch>
+        </>
+        
     )
 }

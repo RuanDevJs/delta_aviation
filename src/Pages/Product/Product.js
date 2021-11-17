@@ -15,6 +15,7 @@ import Cremalheira from "../../assets/images/product/cremalheira.png";
 
 import Button from "../../Components/Button";
 import { ProductPrice } from "../../Parts/Home/Produtos/style";
+import Footers from "../../Components/Footer";
 
 function Product() {
   const [name, setName] = useState("");
@@ -155,6 +156,7 @@ function Product() {
           </Right>
         </Container>
       )}
+      <Footers />
     </>
   );
 }

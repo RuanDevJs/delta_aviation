@@ -14,6 +14,7 @@ import Cremalheira from "../../assets/images/product/cremalheira.png";
 import Header from "../../Components/Header";
 import Button from "../../Components/Button";
 import { Link } from "react-router-dom";
+import Footers from "../../Components/Footer";
 
 export default function Categoria() {
   const { category } = useParams();
@@ -134,6 +135,7 @@ export default function Categoria() {
           })}
         </Container>
       </Categorias>
+      <Footers />
     </>
   );
 }

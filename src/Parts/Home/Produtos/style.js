@@ -17,6 +17,12 @@ export const Title = styled.h1`
    color: #55C1C3; 
    font-weight: 900;
    text-transform: capitalize;
+
+   @media (max-width: 728px){
+    text-align: center;
+    padding: 10px 0;
+   }
+}
 `;
 
 export const Container = styled.div`
@@ -27,6 +33,14 @@ export const Container = styled.div`
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media (max-width: 728px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 `;
 
 export const Wrap = styled.div`

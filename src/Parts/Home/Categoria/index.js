@@ -19,6 +19,15 @@ function Categorias() {
     speed: 500,
   };
 
+  const settingsMobile = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "10px",
+    slidesToShow: 1,
+    speed: 500,
+  };
+
   const categoria = [
     {
       title: "Monomotor",
@@ -41,12 +50,32 @@ function Categorias() {
   return (
     <Categoria>
       <Title>Categorias</Title>
-      <Slider {...settings} pauseOnFocus>
+      <Slider {...settings} pauseOnFocus className="slider-desktop">
         {categoria.map(({ title, image }) => {
           return (
             <CategoryArea key={title}>
               <img src={image} alt={title} />
-              <CategoryTitle as={Link} to={`/categoria/${title}`} style={{textAlign: "center", display: "block"}}>
+              <CategoryTitle
+                as={Link}
+                to={`/categoria/${title}`}
+                style={{ textAlign: "center", display: "block" }}
+              >
+                {title}
+              </CategoryTitle>
+            </CategoryArea>
+          );
+        })}
+      </Slider>
+      <Slider {...settingsMobile} pauseOnFocus className="slider-mobile">
+        {categoria.map(({ title, image }) => {
+          return (
+            <CategoryArea key={title}>
+              <img src={image} alt={title} />
+              <CategoryTitle
+                as={Link}
+                to={`/categoria/${title}`}
+                style={{ textAlign: "center", display: "block" }}
+              >
                 {title}
               </CategoryTitle>
             </CategoryArea>

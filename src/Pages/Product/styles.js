@@ -18,6 +18,14 @@ export const Container = styled.section`
   justify-content: space-between;
   flex-wrap: wrap;
   animation: ${animate} 0.5s forwards;
+
+  @media (max-width: 728px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 `;
 
 export const Left = styled.div`
