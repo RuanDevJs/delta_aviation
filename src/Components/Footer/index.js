@@ -45,7 +45,7 @@ export default function Footers() {
       {!loading && authenticated ? (
         <Wrap>
           <Person htmlColor="#51C8C2" />
-          <a href="#" to="/painel" onClick={handleClick}>
+          <a href="#">
             {name}
           </a>
         </Wrap>
