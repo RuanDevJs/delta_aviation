@@ -11,6 +11,15 @@ export const Title = styled.h1`
   color: #55c1c3;
   font-weight: 900;
   text-transform: capitalize;
+
+  @media (max-width: 728px){
+    & {
+      text-align: center;
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+  }
 `;
 
 export const Container = styled.div`
@@ -21,6 +30,17 @@ export const Container = styled.div`
     align-items: center;
     flex-wrap;
     gap: 20px;
+
+    @media (max-width: 728px){
+      & {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      a {
+        margin: 10px auto;
+      }
+    }
 `;
 
 export const Wrap = styled.div`

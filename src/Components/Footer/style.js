@@ -10,9 +10,9 @@ export const Footer = styled.footer`
     background: #f2f2f2;
     display: none;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: 1000;
-
+    text-align: center;
     @media (max-width: 728px){
         & {
             display: flex;
@@ -26,10 +26,13 @@ export const Wrap = styled.div`
     align-items: center;
     jusrtify-content: center;
     padding: 0 30px;
+    text-align: center;
+
 
     a {
         display: block;
         padding: 5px 0;
+        text-align: center;
 
         font-weight: 300;
         font-size: 18px;

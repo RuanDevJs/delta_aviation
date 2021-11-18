@@ -25,6 +25,8 @@ export const Container = styled.section`
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
+  }
 }
 `;
 
@@ -50,6 +52,7 @@ export const Right = styled.div`
     text-transform: uppercase;
     transition: .2s ease-out;
     cursor: pointer;
+    margin: 20px auto 100px auto;
   }
 
   a:hover {

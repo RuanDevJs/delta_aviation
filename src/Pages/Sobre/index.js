@@ -1,5 +1,9 @@
 import React from 'react';
-import lucas from "../../assets/images/sobre/Rectangle 24.svg";
+import pema from "../../assets/images/sobre/Pema.jpeg";
+import dolan from "../../assets/images/sobre/Dolan.jpeg";
+import caique from "../../assets/images/sobre/Caique.jpeg";
+import flavio from "../../assets/images/sobre/Flavio.jpeg";
+
 import Footers from '../../Components/Footer';
 import Header from '../../Components/Header';
 
@@ -15,23 +19,23 @@ export default function Sobre() {
             </Title>
             <Container>
                 <Wrap>
-                    <img src={lucas} alt="Lucas Pema"/>
+                    <img src={dolan} alt="Thiago Dolan"/>
                     <Name>Thiago Dolan</Name>
                     <WrapTitle>CEO</WrapTitle>
                 </Wrap>
                 <Wrap>
-                    <img src={lucas} alt="Lucas Pema"/>
+                    <img src={pema} alt="Lucas Pema"/>
                     <Name>Lucas Pema</Name>
                     <WrapTitle>Marketing</WrapTitle>
                 </Wrap>
                 <Wrap>
-                    <img src={lucas} alt="Lucas Pema"/>
+                    <img src={caique} alt="Caique"/>
                     <Name>Caique Delgado</Name>
                     <WrapTitle>Desenvolvedor</WrapTitle>
                 </Wrap>
                 <Wrap>
-                    <img src={lucas} alt="Lucas Pema"/>
-                    <Name>Caique Delgado</Name>
+                    <img src={flavio} alt="Flavio"/>
+                    <Name>Flavio Gontijo</Name>
                     <WrapTitle>CEO</WrapTitle>
                 </Wrap>
                 <Wrap size="65% !important">

@@ -27,7 +27,7 @@ export const Left = styled.div`
     max-width: 460px;
 
     @media (max-width: 728px){
-        button {
+        a {
             margin: 0 auto;
             text-align: center;
             display: block;

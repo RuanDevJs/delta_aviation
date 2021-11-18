@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     max-width: 960px;
-    margin: 20px auto;
+    margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    button {
+        displaY: block;
+        margin: 0 auto 90px auto;
+    }
 `;
 
 export const Wrap = styled.div`
@@ -14,6 +19,10 @@ export const Wrap = styled.div`
     display: flex;
     flex-flow: column wrap;
     margin: 20px 0;
+
+    @media (max-width: 728px){
+        align-items: center;
+    }
 `;
 
 export const Label = styled.label`
@@ -41,4 +50,8 @@ export const Left = styled.div`
 
 export const Right = styled.div`
     flex: 1;
+
+    @media (max-width: 728px){
+        display: none;
+    }
 `;

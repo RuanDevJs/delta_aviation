@@ -62,7 +62,7 @@ function Produto() {
         },
     ]
     return (
-        <Produtos>
+        <Produtos id="produtos">
             <Title>Disponíveis</Title>
             <Container>
                 {data.map(({title, preco,img}, index) => {

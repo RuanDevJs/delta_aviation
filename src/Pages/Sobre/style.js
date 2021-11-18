@@ -9,9 +9,21 @@ export const Container = styled.div`
     flex-wrap: wrap;
 
     @media (max-width: 728px){
-        flex-direction: column;
+       & { flex-direction: column;
         align-items: center;
+       }
+       img {
+        margin: 0 auto;
     }
+    }
+    img {
+        margin: 0 auto;
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
 `;
 
 export const Title = styled.h1`
@@ -31,7 +43,7 @@ export const Wrap = styled.div`
 
     @media (max-width: 728px){
       width: 320px;
-      margin-left: 30px;
+
     }
 
     p {

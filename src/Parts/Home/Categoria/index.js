@@ -70,7 +70,9 @@ function Categorias() {
         {categoria.map(({ title, image }) => {
           return (
             <CategoryArea key={title}>
-              <img src={image} alt={title} />
+              <Link to={`/categoria/${title}`}>
+                <img src={image} alt={title} />
+              </Link>
               <CategoryTitle
                 as={Link}
                 to={`/categoria/${title}`}
