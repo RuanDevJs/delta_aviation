@@ -37,6 +37,7 @@ export default function useAuthenticate(){
             
             return rows;
         }catch(e){
+            console.log(e);
             return e;
         }
     }

@@ -152,7 +152,7 @@ export default function Header() {
       <Announcement>
         {!loading && authenticated ? (
           <>
-            <NameLink to="/painel">{name}</NameLink>
+            <NameLink to={`/user/${name}`}>{name}</NameLink>
             <ButtonBuy onClick={logOut}>Sair</ButtonBuy>
           </>
         ) : (

@@ -10,6 +10,7 @@ import Cadastrar from '../Pages/Cadastrar';
 import Sobre from '../Pages/Sobre';
 import Contato from '../Pages/Contato';
 import Footer from '../Components/Footer';
+import Perfil from '../Pages/Perfil';
 
 export default function Routes() {
     return (
@@ -22,6 +23,7 @@ export default function Routes() {
             <Route path="/cadastro" component={Cadastrar} />
             <Route path="/sobre" component={Sobre} />
             <Route path="/contato" component={Contato} />
+            <Route path="/user/:name" component={Perfil} />
             <Route component={Notfound} />
             </Switch>
         </>
