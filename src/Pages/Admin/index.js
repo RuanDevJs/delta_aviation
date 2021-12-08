@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+import { Redirect } from 'react-router';
 import Header from '../../Components/Header';
+import { UserContext } from '../../Contexts/User';
 
 import axios from "../../services/axios";
 import { Center, Container, Label, Left, Right, Wrap } from './style';
@@ -7,7 +9,8 @@ import { Center, Container, Label, Left, Right, Wrap } from './style';
 export default function Admin() {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(null);
-
+    const {authenticated} = useContext(UserContext);
+    
     useEffect(() => {
         (async()=> {
             const res = await (await axios.get('/user')).data;
@@ -20,6 +23,12 @@ export default function Admin() {
         return null;
     }
 
+    if(!authenticated){
+        return(
+            <Redirect to="/" />
+        )
+    }
+
     return (
         <>
             <Header />
@@ -27,7 +36,7 @@ export default function Admin() {
                 {data.map(List)}
             </Container>
         </>
-    )
+    );
 }
 
 const List = ({_id, email, senha}, index) => {
