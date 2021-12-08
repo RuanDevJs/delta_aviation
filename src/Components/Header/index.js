@@ -75,9 +75,6 @@ export default function Header() {
       title: "Sobre",
     },
     {
-      title: "Produtos",
-    },
-    {
       title: "Contato",
     },
   ];
