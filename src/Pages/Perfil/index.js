@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import Button from "../../Components/Button";
 import Header from "../../Components/Header";
+import { UserContext } from "../../Contexts/User";
 
 import useLocalStorage from "../../hooks/useLocalStorage";
 import axios from "../../services/axios";
@@ -9,6 +10,7 @@ import { Container, Input, Title, Wrap } from "./style";
 export default function Perfil() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
+  const { DeleteUser } = useContext(UserContext);
 
   const id = useLocalStorage("id");
 
@@ -49,6 +51,7 @@ export default function Perfil() {
     <>
       <Header />
       <Container>
+      <p onClick={() => DeleteUser(data._id)}>Apagar</p>
         <Title>Minha Conta</Title>
         <Wrap className="wrap">
           <Input

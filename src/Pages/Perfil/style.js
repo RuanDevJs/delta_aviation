@@ -19,6 +19,13 @@ export const Container = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+
+    p {
+        font-weight: 300;
+        color: #c8c8c8;
+        padding: 10px 0;
+        cursor: pointer;
+    }
 `;
 
 export const Title = styled.h1`

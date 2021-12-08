@@ -48,5 +48,14 @@ export default function useAuthenticate(){
         history.push("/login");
     }
 
-    return {Login, authenticated, loading, logOut, setAuthenticated, StoreUser}
+    async function DeleteUser(id){
+        const rows = await (await axios.delete(`/user/${id}`)).status;
+        if(rows){
+            setAuthenticated(false);
+            window.localStorage.removeItem("id");
+            history.push("/");
+        };
+    }
+
+    return {Login, authenticated, loading, logOut, setAuthenticated, StoreUser, DeleteUser}
 }
