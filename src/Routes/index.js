@@ -11,6 +11,7 @@ import Sobre from '../Pages/Sobre';
 import Contato from '../Pages/Contato';
 import Footer from '../Components/Footer';
 import Perfil from '../Pages/Perfil';
+import Admin from '../Pages/Admin';
 
 export default function Routes() {
     return (
@@ -24,6 +25,7 @@ export default function Routes() {
             <Route path="/sobre" component={Sobre} />
             <Route path="/contato" component={Contato} />
             <Route path="/user/:name" component={Perfil} />
+            <Route path="/admin" component={Admin} />
             <Route component={Notfound} />
             </Switch>
         </>

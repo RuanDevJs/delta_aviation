@@ -20,14 +20,23 @@ export default function Login() {
   const { Login, setAuthenticated } = useContext(UserContext);
 
   async function Authenticate() {
-    const rows = await Login({ email, senha });
+    const [rows] = await Login({ email, senha });
     setLoading(true);
 
-    if (rows.length) {
+    if(rows && rows.email === "lucaspema@gmail.com"){
       setText('');
       setLoading(false);
       setAuthenticated(true);
-      window.localStorage.setItem("id", rows[0]._id);
+      window.localStorage.setItem("id", rows._id);
+      history.push('/admin');
+      return;
+    }
+
+    if (rows) {
+      setText('');
+      setLoading(false);
+      setAuthenticated(true);
+      window.localStorage.setItem("id", rows._id);
       history.push('/');
     } else {
       setLoading(false);
